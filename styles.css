@@ -1,93 +1,60 @@
-/* Basic and Enhanced Styling */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Gradient background for the body */
+    background-color: #f4f4f9; /* Light gray background */
     color: #333; /* Dark gray text for better readability */
-    line-height: 1.6;
-    margin: 0; /* Full body coverage with no margins */
+    text-align: center;
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centers the form vertically and horizontally */
-    min-height: 100vh; /* Minimum height to full viewport height */
+    align-items: center;
+    min-height: 100vh;
 }
 
 main {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Enhanced shadow for more depth */
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the form */
-    border-radius: 12px; /* Increased border-radius for a softer look */
-    width: 100%;
-    max-width: 400px; /* Optimized width for all devices */
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
     padding: 30px;
-    border: 1px solid rgba(255,255,255,0.3); /* Subtle white border */
-    backdrop-filter: blur(10px); /* Adding blur effect behind the form */
-    transition: transform 0.3s ease-in-out; /* Smooth transform effect for hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-main:hover {
-    transform: scale(1.02); /* Slight scale on hover for an interactive feel */
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
+h1 {
     color: #5a5a5a;
-    font-size: 0.95em;
-    opacity: 0.9;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 input, button {
     width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    box-sizing: border-box;
-    border-radius: 6px;
-    border: 2px solid transparent;
-    background: #ffffff; /* White background for inputs for better readability */
-    transition: all 0.3s ease-in-out; /* Transition for interactive elements */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 input:focus {
-    outline: none;
     border-color: #6658d3;
-    box-shadow: 0 0 8px rgba(102,88,211,0.5);
+    box-shadow: 0 0 0 2px rgba(102,88,211,0.2);
 }
 
 button {
     background-color: #6658d3;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     color: white;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-button:hover, button:focus {
+button:hover {
     background-color: #5848c2;
-    transform: translateY(-2px); /* Lift effect on hover for the button */
-}
-
-/* Responsive Design Adjustments */
-@media only screen and (min-width: 768px) {
-    main {
-        width: 75%; /* Adjust width for tablet and above */
-        padding: 40px; /* More padding inside the form for better layout on tablets */
-    }
-
-    input, button {
-        padding: 15px 20px; /* More comfortable padding */
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    main {
-        width: 50%; /* Center more on larger screens */
-        margin-top: 0; /* Remove top margin for centered layout */
-        padding: 50px; /* More generous padding for aesthetics */
-    }
-
-    label {
-        font-size: 1.05em; /* Larger font size for desktop readability */
-    }
 }
