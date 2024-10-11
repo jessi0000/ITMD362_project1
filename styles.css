@@ -1,58 +1,71 @@
 /* Basic and Enhanced Styling */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f4f4f9; /* Light gray background */
+    background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Gradient background for the body */
     color: #333; /* Dark gray text for better readability */
     line-height: 1.6;
-    margin: 20px;
+    margin: 0; /* Full body coverage with no margins */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the form vertically and horizontally */
+    min-height: 100vh; /* Minimum height to full viewport height */
 }
 
 main {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for the form container */
-    background: white; /* White background for the form */
-    border-radius: 8px; /* Rounded corners for modern look */
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow: hidden; /* Ensures no content spills out */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Enhanced shadow for more depth */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the form */
+    border-radius: 12px; /* Increased border-radius for a softer look */
+    width: 100%;
+    max-width: 400px; /* Optimized width for all devices */
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.3); /* Subtle white border */
+    backdrop-filter: blur(10px); /* Adding blur effect behind the form */
+    transition: transform 0.3s ease-in-out; /* Smooth transform effect for hover */
+}
+
+main:hover {
+    transform: scale(1.02); /* Slight scale on hover for an interactive feel */
 }
 
 label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #5a5a5a; /* Slightly darker color for labels for emphasis */
+    margin-bottom: 8px;
+    color: #5a5a5a;
+    font-size: 0.95em;
+    opacity: 0.9;
 }
 
 input, button {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    box-sizing: border-box; /* Includes padding and border in element's width/height */
-    border-radius: 4px; /* Slightly rounded borders for inputs and button */
-    border: 1px solid #ccc; /* Subtle border for inputs */
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background: #ffffff; /* White background for inputs for better readability */
+    transition: all 0.3s ease-in-out; /* Transition for interactive elements */
 }
 
 input:focus {
-    outline: none; /* Removes default focus outline */
-    border-color: #6658d3; /* Highlight color when input is focused */
-    box-shadow: 0 0 0 2px rgba(102,88,211,0.2); /* Soft glow effect */
+    outline: none;
+    border-color: #6658d3;
+    box-shadow: 0 0 8px rgba(102,88,211,0.5);
 }
 
 button {
-    background-color: #6658d3; /* Consistent brand color for primary actions */
-    text-transform: uppercase; /* Makes the button text uppercase */
-    letter-spacing: 1px; /* Spacing between letters for better readability */
+    background-color: #6658d3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
 button:hover, button:focus {
-    background-color: #5848c2; /* Darker purple on hover for interaction feedback */
-    outline: none; /* Ensures no outline on focus for cleaner look */
+    background-color: #5848c2;
+    transform: translateY(-2px); /* Lift effect on hover for the button */
 }
 
 /* Responsive Design Adjustments */
@@ -68,17 +81,13 @@ button:hover, button:focus {
 }
 
 @media only screen and (min-width: 1024px) {
-    body {
-        background-color: #eaeaea; /* Slightly darker background on desktops for contrast */
-    }
-
     main {
         width: 50%; /* Center more on larger screens */
-        margin-top: 50px; /* More vertical space on desktop */
+        margin-top: 0; /* Remove top margin for centered layout */
         padding: 50px; /* More generous padding for aesthetics */
     }
 
     label {
-        font-size: 1.1em; /* Larger font size for desktop readability */
+        font-size: 1.05em; /* Larger font size for desktop readability */
     }
 }
