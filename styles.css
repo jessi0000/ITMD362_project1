@@ -1,8 +1,7 @@
 /* Base styles and imports */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%), url('path_to_your_pattern_image.png'); /* Added a background pattern */
-    background-size: cover, auto; /* Ensure the gradient covers the entire area and the pattern is set correctly */
+    background-color: #f4f4f9;  /* Soft purple background */
     color: #333;
     text-align: center;
     padding: 20px;
@@ -14,52 +13,57 @@ body {
 }
 
 main {
-    background: rgba(255, 255, 255, 0.95); /* Increase opacity for better readability over pattern */
+    background: white;
     border-radius: 15px;
     width: 90%;
-    max-width: 320px;
-    padding: 30px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 360px;  /* Appropriate width for form */
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+    backdrop-filter: blur(10px);  /* Blur effect for a soft aesthetic */
 }
 
-h1, p {
-    color: #6a5d8d; /* Soft purple text */
-    font-family: 'Pacifico', cursive; /* Applying a cursive font for a softer look */
+h1 {
+    font-family: 'Pacifico', cursive;  /* Stylish, friendly font */
+    font-size: 32px;  /* Larger font size for emphasis */
+    color: #6a5d8d; /* Soft purple */
+    margin-bottom: 10px;  /* Spacing under the header */
 }
 
-/* Input and button enhancements */
+p {
+    font-size: 18px;  /* Standard text size for readability */
+    color: #6a5d8d; /* Maintaining theme consistency */
+    margin-bottom: 20px;  /* Space above the form fields */
+}
+
+/* Styling for input fields */
 input, button {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
-    border-radius: 8px;
-    border: 2px solid #dec2f0;
-    background: #ffffff;
-    transition: all 0.4s ease-in-out;
+    border-radius: 12px;  /* Rounded edges for a softer look */
+    border: 2px solid #dec2f0;  /* Light purple border to match the theme */
+    background: linear-gradient(145deg, #e6e1f5, #ffffff);  /* Subtle gradient */
+    box-shadow: 0 2px 5px rgba(154, 140, 152, 0.2);  /* Inner shadow for depth */
+    transition: all 0.3s ease-in-out;  /* Smooth transition for hover effects */
 }
 
-input:focus, input:hover {
-    border-color: #b19cd9;
-    box-shadow: 0 4px 8px rgba(177, 156, 217, 0.3);
-    background: #fafbff; /* Slightly lighter background on hover/focus */
+input:focus {
+    border-color: #c7b2d7;  /* Darker purple on focus for visibility */
+    box-shadow: 0 2px 4px rgba(177, 156, 217, 0.4);  /* Focus effect */
 }
 
+/* Styling adjustments for the button */
 button {
-    background-color: #b19cd9;
-    color: white;
+    background-color: #b19cd9;  /* Light purple button */
+    color: #4a306d;  /* Dark purple text for better readability */
     border: none;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(150, 123, 182, 0.3);
-    font-weight: 600; /* Making text bolder for better readability */
+    font-weight: bold;  /* Bolder text for emphasis */
+    transition: background-color 0.3s, box-shadow 0.3s;  /* Smooth transitions */
 }
 
 button:hover {
-    background-color: #967bb6;
-    box-shadow: 0 4px 8px rgba(150, 123, 182, 0.4);
-    transform: translateY(-2px);
-}
-
-/* Adding a transition effect for better user interaction */
-input[type='text'], input[type='email'], input[type='password'] {
-    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background-color: #967bb6;  /* Slightly darker purple on hover */
+    box-shadow: 0 4px 8px rgba(150, 123, 182, 0.3);  /* Enhanced shadow on hover */
+    transform: translateY(-2px);  /* Subtle lift effect */
 }
