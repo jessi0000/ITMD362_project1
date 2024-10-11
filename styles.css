@@ -1,9 +1,8 @@
-/* Enhanced and Thematic Styling */
+/* Base styles and imports */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(-45deg, #d7a7ff, #eeccff, #f7e8ff, #e6b0ff);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%), url('path_to_your_pattern_image.png'); /* Added a background pattern */
+    background-size: cover, auto; /* Ensure the gradient covers the entire area and the pattern is set correctly */
     color: #333;
     text-align: center;
     padding: 20px;
@@ -14,59 +13,35 @@ body {
     min-height: 100vh;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.welcome {
-    margin-bottom: 20px;
-    opacity: 0.9;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 0.9; }
-}
-
 main {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95); /* Increase opacity for better readability over pattern */
     border-radius: 15px;
     width: 90%;
-    max-width: 400px;
+    max-width: 320px;
     padding: 30px;
-    box-shadow: 0 10px 20px rgba(154, 140, 152, 0.1);
-    backdrop-filter: blur(5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 28px;
-    color: #6a5d8d;
-    margin-bottom: 10px;
+h1, p {
+    color: #6a5d8d; /* Soft purple text */
+    font-family: 'Pacifico', cursive; /* Applying a cursive font for a softer look */
 }
 
-p {
-    font-size: 18px;
-    color: #6a5d8d;
-    margin-bottom: 20px;
-}
-
+/* Input and button enhancements */
 input, button {
     width: 100%;
     padding: 12px;
-    margin-top: 8px;
+    margin-top: 10px;
     border-radius: 8px;
     border: 2px solid #dec2f0;
     background: #ffffff;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
-input:focus {
+input:focus, input:hover {
     border-color: #b19cd9;
-    box-shadow: 0 0 8px rgba(177, 156, 217, 0.5);
+    box-shadow: 0 4px 8px rgba(177, 156, 217, 0.3);
+    background: #fafbff; /* Slightly lighter background on hover/focus */
 }
 
 button {
@@ -74,14 +49,17 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(150, 123, 182, 0.3);
+    font-weight: 600; /* Making text bolder for better readability */
 }
 
 button:hover {
     background-color: #967bb6;
+    box-shadow: 0 4px 8px rgba(150, 123, 182, 0.4);
     transform: translateY(-2px);
+}
+
+/* Adding a transition effect for better user interaction */
+input[type='text'], input[type='email'], input[type='password'] {
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
