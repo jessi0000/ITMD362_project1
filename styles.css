@@ -1,7 +1,9 @@
 /* Enhanced and Thematic Styling */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); /* Soft blue to white gradient */
+    background: linear-gradient(-45deg, #d7a7ff, #eeccff, #f7e8ff, #e6b0ff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #333;
     text-align: center;
     padding: 20px;
@@ -10,6 +12,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .welcome {
@@ -24,25 +32,25 @@ body {
 }
 
 main {
-    background: rgba(245, 245, 255, 0.9); /* Very light purple background */
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     width: 90%;
     max-width: 400px;
     padding: 30px;
-    box-shadow: 0 10px 20px rgba(154, 140, 152, 0.1); /* Subtle purple shadow */
+    box-shadow: 0 10px 20px rgba(154, 140, 152, 0.1);
     backdrop-filter: blur(5px);
 }
 
 h1 {
     font-family: 'Pacifico', cursive;
     font-size: 28px;
-    color: #6a5d8d; /* Soft purple */
+    color: #6a5d8d;
     margin-bottom: 10px;
 }
 
 p {
     font-size: 18px;
-    color: #6a5d8d; /* Soft purple text for consistency */
+    color: #6a5d8d;
     margin-bottom: 20px;
 }
 
@@ -51,18 +59,18 @@ input, button {
     padding: 12px;
     margin-top: 8px;
     border-radius: 8px;
-    border: 2px solid #dec2f0; /* Light purple border */
-    background: #ffffff; /* White background for inputs to maintain readability */
+    border: 2px solid #dec2f0;
+    background: #ffffff;
     transition: all 0.3s ease-in-out;
 }
 
 input:focus {
-    border-color: #b19cd9; /* Deeper purple for focus */
-    box-shadow: 0 0 8px rgba(177, 156, 217, 0.5); /* Soft glow effect */
+    border-color: #b19cd9;
+    box-shadow: 0 0 8px rgba(177, 156, 217, 0.5);
 }
 
 button {
-    background-color: #b19cd9; /* Light purple button */
+    background-color: #b19cd9;
     color: white;
     border: none;
     cursor: pointer;
@@ -74,6 +82,6 @@ button {
 }
 
 button:hover {
-    background-color: #967bb6; /* Slightly darker purple on hover */
-    transform: translateY(-2px); /* Lift effect on hover for the button */
+    background-color: #967bb6;
+    transform: translateY(-2px);
 }
