@@ -1,0 +1,84 @@
+/* Basic and Enhanced Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9; /* Light gray background */
+    color: #333; /* Dark gray text for better readability */
+    line-height: 1.6;
+    margin: 20px;
+}
+
+main {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for the form container */
+    background: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners for modern look */
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden; /* Ensures no content spills out */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5a5a5a; /* Slightly darker color for labels for emphasis */
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Includes padding and border in element's width/height */
+    border-radius: 4px; /* Slightly rounded borders for inputs and button */
+    border: 1px solid #ccc; /* Subtle border for inputs */
+}
+
+input:focus {
+    outline: none; /* Removes default focus outline */
+    border-color: #6658d3; /* Highlight color when input is focused */
+    box-shadow: 0 0 0 2px rgba(102,88,211,0.2); /* Soft glow effect */
+}
+
+button {
+    background-color: #6658d3; /* Consistent brand color for primary actions */
+    text-transform: uppercase; /* Makes the button text uppercase */
+    letter-spacing: 1px; /* Spacing between letters for better readability */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover, button:focus {
+    background-color: #5848c2; /* Darker purple on hover for interaction feedback */
+    outline: none; /* Ensures no outline on focus for cleaner look */
+}
+
+/* Responsive Design Adjustments */
+@media only screen and (min-width: 768px) {
+    main {
+        width: 75%; /* Adjust width for tablet and above */
+        padding: 40px; /* More padding inside the form for better layout on tablets */
+    }
+
+    input, button {
+        padding: 15px 20px; /* More comfortable padding */
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        background-color: #eaeaea; /* Slightly darker background on desktops for contrast */
+    }
+
+    main {
+        width: 50%; /* Center more on larger screens */
+        margin-top: 50px; /* More vertical space on desktop */
+        padding: 50px; /* More generous padding for aesthetics */
+    }
+
+    label {
+        font-size: 1.1em; /* Larger font size for desktop readability */
+    }
+}
