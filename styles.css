@@ -57,6 +57,8 @@ input, button {
 input:focus {
     border-color: #c7b2d7;  /* Darker purple on focus for visibility */
     box-shadow: 0 2px 4px rgba(177, 156, 217, 0.4);  /* Focus effect */
+    transform: scale(1.1);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 /* Styling adjustments for the button */
