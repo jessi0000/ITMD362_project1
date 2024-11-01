@@ -10,14 +10,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 main {
     background: white;
     border-radius: 15px;
     width: 90%;
-    max-width: 360px;  /* Appropriate width for form */
-    padding: 40px;
+    max-width: 300px;  /* Appropriate width for form */
+    padding: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
     backdrop-filter: blur(10px);  /* Blur effect for a soft aesthetic */
 }

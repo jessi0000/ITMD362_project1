@@ -22,6 +22,5 @@ document.getElementById('signup-form').addEventListener('submit', function(event
         alert("Errors:\n" + errors.join("\n"));
     } else {
         alert("Form submitted successfully!");
-        // Here you might handle the actual form submission, e.g., via AJAX
     }
 });
